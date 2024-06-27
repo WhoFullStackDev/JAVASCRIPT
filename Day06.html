@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Demo</p>
+    <p id="demo"></p>
+    <p>Adding</p>
+    <p id="Adding"></p>
+    <p>Subtracting</p>
+    <p id="Subtracting"></p>
+    <p>Multiplying</p>
+    <p id="Multiplying"></p>
+    <p>Dividing</p>
+    <p id="Dividing"></p>
+    <p>Remainder</p>
+    <p id="Remainder"></p>
+    <p>Incrementing</p>
+    <p id="Incrementing"></p>
+    <p>Decrementing</p>
+    <p id="Decrementing"></p>
+    <p>Exponentiation</p>
+    <p id="Exponentiation"></p>
+    <p>Operator Precedence</p>
+    <p id="OperatorPrecedence"></p>
+    <script>
+      //   let x = 100 + 50;
+      //   let a = 100;
+      //   let b = 50;
+      //   let x = a + b;
+      let a = 3;
+      let x = (100 + 50) * a;
+      document.getElementById("demo").innerHTML = x;
+      //   *******Adding********
+      let v = 5;
+      let y = 2;
+      let z = v + y;
+      document.getElementById("Adding").innerHTML = z;
+
+      //   ************Subtracting*************
+      let s = 5;
+      let q = 2;
+      let r = s - q;
+      document.getElementById("Subtracting").innerHTML = r;
+
+      // ***********Multiplying********
+      let m = 5;
+      let n = 2;
+      let o = m * n;
+      document.getElementById("Multiplying").innerHTML = o;
+
+      // *************Dividing**********
+      let h = 6;
+      let j = 2;
+      let i = h / j;
+      document.getElementById("Dividing").innerHTML = i;
+
+      // *************Remainder***************
+      let k = 5;
+      let l = 2;
+      let t = k % l;
+      document.getElementById("Remainder").innerHTML = t;
+
+      // **********Incrementing******
+      let b = 5;
+      b++;
+      let c = b;
+      document.getElementById("Incrementing").innerHTML = c;
+
+      // **********Decrementing**********
+      let d = 5;
+      d--;
+      let e = d;
+      document.getElementById("Decrementing").innerHTML = e;
+
+      // **********Exponentiation**********
+      let f = 5;
+      document.getElementById("Exponentiation").innerHTML = f ** 2;
+
+      // **********Operator Precedence*********
+      document.getElementById("OperatorPrecedence").innerHTML = 100 + 50 * 3;
+    </script>
+  </body>
+</html>

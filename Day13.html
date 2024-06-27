@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Objects</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      //   const person = {
+      //     name: "John",
+      //     age: 30,
+      //     city: "New York",
+      //   };
+
+      //   let text = "";
+      //   for (let x in person) {
+      //     text += person[x] + " ";
+      //   }
+      //   const myArray = Object.values(person);
+      //   document.getElementById("demo").innerHTML =
+      //     // person.name + ", " + person.age + ", " + person.city;
+      //     // text;
+      //     myArray;
+
+      //   const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+      //   let text = "";
+      //   for (let [fruit, amount] of Object.entries(fruits)) {
+      //     text += fruit + ": " + amount + "<br>";
+      //   }
+
+      //   document.getElementById("demo").innerHTML = text;
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      // Stringify Object
+      let myString = JSON.stringify(person);
+
+      // Display String
+      document.getElementById("demo").innerHTML = myString;
+    </script>
+  </body>
+</html>

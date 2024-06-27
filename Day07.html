@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>The = Operator</h2>
+    <p id="SimpleAssignment"></p>
+    <h2>Addition Assignment</h2>
+    <p id="AdditionAssignment"></p>
+    <h2>Subtraction Assignment</h2>
+    <p id="SubtractionAssignment"></p>
+    <h2>Multiplication Assignment</h2>
+    <p id="MultiplicationAssignment"></p>
+    <h2>Division Assignment</h2>
+    <p id="DivisionAssignment"></p>
+    <h2>Remainder Assignment</h2>
+    <p id="RemainderAssignment"></p>
+    <script>
+      let a = 5;
+      let b = a + 4;
+      document.getElementById("SimpleAssignment").innerHTML = b;
+
+      // **********Addition Assignment*********
+      let c = 10;
+      c += 5;
+      document.getElementById("AdditionAssignment").innerHTML = c;
+
+      //*********Subtraction Assignment*********
+      let d = 10;
+      d -= 5;
+      document.getElementById("SubtractionAssignment").innerHTML = d;
+
+      //**********Multiplication Assignment*********
+      let e = 10;
+      e *= 2;
+      document.getElementById("MultiplicationAssignment").innerHTML = e;
+
+      //**********Division Assignment********
+      let f = 16;
+      f /= 2;
+      document.getElementById("DivisionAssignment").innerHTML = f;
+
+      //**********Remainder Assignment**********
+      let h = 5;
+      h %= 2;
+      document.getElementById("RemainderAssignment").innerHTML = h;
+    </script>
+  </body>
+</html>

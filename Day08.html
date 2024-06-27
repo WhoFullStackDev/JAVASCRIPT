@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Strings</h2>
+    <p id="string"></p>
+    <h2>Numbers</h2>
+    <p id="numbers"></p>
+    <h2>Exponential Notation</h2>
+    <p id="notation"></p>
+    <h2>BigInt</h2>
+    <p id="bigint"></p>
+    <h2>Boolean</h2>
+    <p id="boolean"></p>
+    <h2>Array</h2>
+    <p id="array"></p>
+    <h2>Objects</h2>
+    <p id="objects"></p>
+    <h2>typeof Operator</h2>
+    <p id="typeof"></p>
+    <h2>Undefined</h2>
+    <p id="undefined"></p>
+    <h2>Null</h2>
+    <p id="null"></p>
+    <script>
+      // ********String*********
+      let carName1 = "Volvo XC60";
+      let carName2 = "Volvo XC60";
+
+      document.getElementById("string").innerHTML =
+        carName1 + "<br>" + carName2;
+
+      //***********Numbers*********
+      let x1 = 34.0;
+      let x2 = 34;
+      let x3 = 3.14;
+
+      document.getElementById("numbers").innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
+
+      //*************Notation************
+      let y = 123e5;
+      let z = 123e-5;
+
+      document.getElementById("notation").innerHTML = y + "<br>" + z;
+
+      //***********BigInt************
+      let x = BigInt("123456789012345678901234567890");
+      document.getElementById("bigint").innerHTML = x;
+
+      //**********Boolean************
+      let s = 5;
+      let t = 5;
+      let r = 6;
+
+      document.getElementById("boolean").innerHTML =
+        (s == t) + "<br>" + (s == r);
+
+      //****************Array**************
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      document.getElementById("array").innerHTML = cars[0];
+
+      //**************Objects**************
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("objects").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+
+      // **********typeof Operator************
+      document.getElementById("typeof").innerHTML =
+        typeof 0 +
+        "<br>" +
+        typeof 314 +
+        "<br>" +
+        typeof 3.14 +
+        "<br>" +
+        typeof 3 +
+        "<br>" +
+        typeof (3 + 4) +
+        "<br>" +
+        typeof "" +
+        "<br>" +
+        typeof "John" +
+        "<br>" +
+        typeof "John Doe";
+      // ************Undefined***********
+      //   let car;
+      let car = undefined;
+      document.getElementById("undefined").innerHTML = car;
+
+      //   ********Null*********
+      const o = null;
+      document.getElementById("null").innerHTML = o;
+    </script>
+  </body>
+</html>

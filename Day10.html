@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Objects</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      //   const car = { type: "Fiat", model: "500", color: "white" };
+
+      //   document.getElementById("demo").innerHTML = "The car type is " + car.type;
+
+      //   const person = {
+      //     firstName: "John",
+      //     lastName: "Doe",
+      //     age: 50,
+      //     eyeColor: "blue",
+      //   };
+
+      //   document.getElementById("demo").innerHTML =
+      //     person.firstName + " is " + person.age + " years old.";
+
+      //   const person = {};
+
+      //   person.firstName = "John";
+      //   person.lastName = "Doe";
+      //   person.age = 50;
+      //   person.eyeColor = "blue";
+
+      // const person = new Object();
+
+      // // Add Properties
+      // person.firstName = "John";
+      // person.lastName = "Doe";
+      // person.age = 50;
+      // person.eyeColor = "blue";
+
+      // document.getElementById("demo").innerHTML =
+      //   person.firstName + " is " + person.age + " years old.";
+      // const person = {
+      //   firstname: "John",
+      //   lastname: "Doe",
+      //   age: 50,
+      //   eyecolor: "blue",
+      // };
+
+      // document.getElementById("demo").innerHTML =
+      //   person.firstname + " is " + person.age + " years old.";
+
+      // const person = {
+      //   firstname: "John",
+      //   lastname: "Doe",
+      //   age: 50,
+      //   eyecolor: "blue",
+      // };
+
+      // document.getElementById("demo").innerHTML =
+      //   person["firstname"] + " is " + person["age"] + " years old.";
+
+      // const person = {
+      //   firstName: "John",
+      //   lastName: "Doe",
+      //   age: 50,
+      // };
+
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      person.nationality = "English";
+
+      // let x = "firstName";
+      // let y = "age";
+      // document.getElementById("demo").innerHTML =
+      // person.firstname + " is " + person.nationality + ".";
+
+      // delete person.age;
+      delete person["age"];
+      document.getElementById("demo").innerHTML =
+        person.firstname + " is " + person.age + " years old.";
+    </script>
+  </body>
+</html>
