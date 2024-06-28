@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Strings</h1>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+      let text = "John Doe";
+      document.getElementById("demo").innerHTML = text;
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+
+      document.getElementById("demo1").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+      document.getElementById("demo2").innerHTML = "Hello " + "Dolly!";
+
+      // x is a string
+      let x = "John";
+
+      // y is an object
+      let y = new String("John");
+      document.getElementById("demo3").innerHTML = typeof x + "<br>" + typeof y;
+      document.getElementById("demo4").innerHTML = x == y;
+      document.getElementById("demo5").innerHTML = x === y;
+    </script>
+  </body>
+</html>

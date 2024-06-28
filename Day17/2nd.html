@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sli"></div>
+    <div id="substring"></div>
+    <div id="substr"></div>
+    <div id="upperCase"></div>
+    <div id="lowerCase"></div>
+    <div id="concat"></div>
+    <div id="trim"></div>
+    <div id="trimStr"></div>
+    <div id="trimEnd"></div>
+    <div id="padding"></div>
+    <div id="padEnd"></div>
+    <div id="rep"></div>
+
+    <button onclick="myFunction()">Clock to replace</button>
+    <p>Note : Replace is case sensitive</p>
+    <p id="demo">Please visit Microsoft!</p>
+
+    <button onclick="ReplaceAll()">Click to replace All</button>
+    <p>Note : Replace All is case sensitive</p>
+    <p id="demoAll">
+      I love cats. Cats are very easy to love. Cats are very popular.
+    </p>
+    <div id="split"></div>
+  </body>
+  <script>
+    // ************slice************
+    let text = "Apple, Banana, Kiwi";
+    // let sli = text.slice(7, 13);
+    let sli = text.slice(7);
+    document.getElementById("sli").innerHTML = sli;
+
+    // **********************SubString*******************
+    let substring = text.substring(7, 13);
+    document.getElementById("substring").innerHTML = substring;
+
+    // **********************SubStr***********************
+    // let substr = text.substr(7, 2);
+    // let substr = text.substr(7, 6);
+    // let substr = text.substr(7);
+    let substr = text.substr(-4);
+    document.getElementById("substr").innerHTML = substr;
+
+    //*****************Uppercase*****************
+    let text1 = "Hello World!";
+    let upperCase = text1.toUpperCase();
+    document.getElementById("upperCase").innerHTML = upperCase;
+
+    //*****************LowerCase******************
+
+    let lowerCase = text1.toLowerCase();
+    document.getElementById("lowerCase").innerHTML = lowerCase;
+
+    // *******************Concat****************
+    let text2 = "Hello";
+    let text3 = "World";
+
+    // let concat = text2.concat(" ", text3);
+    // let concat = "Hello" + " " + "World!";
+    let concat = "Hello".concat(" ", "World!");
+
+    document.getElementById("concat").innerHTML = concat;
+
+    // ********************Trim**********************
+
+    let text4 = "      Hello World!      ";
+    let trim = text4.trim();
+    document.getElementById("trim").innerHTML =
+      "Length text4 = " + text4.length + "<br>Length trim = " + trim.length;
+
+    // **********************TrimStart**************
+    let text5 = "      Hello World!      ";
+    let trimStr = text4.trimStart();
+    document.getElementById("trimStr").innerHTML =
+      "Length text5 = " +
+      text4.length +
+      "<br>Length trimStr = " +
+      trimStr.length;
+
+    //******************TrimEnd*********************
+    let text6 = "      Hello World!      ";
+    let trimEnd = text4.trimEnd();
+    document.getElementById("trimEnd").innerHTML =
+      "Length text6 = " +
+      text4.length +
+      "<br>Length trimEnd = " +
+      trimEnd.length;
+
+    //*********************PadStart****************
+    let text7 = "5";
+    text7 = text7.padStart(4, "0");
+    document.getElementById("padding").innerHTML = text7;
+
+    //********************PadEnd************************
+    let text8 = "5";
+    text8 = text8.padEnd(4, "0");
+    document.getElementById("padEnd").innerHTML = text8;
+
+    //************Repeat**************
+    let rep = "Hello";
+    let rrpRes = rep.repeat(2);
+    document.getElementById("rep").innerHTML = rrpRes;
+
+    //******************Replace***************
+    // function myFunction() {
+    //   let text = document.getElementById("demo").innerHTML;
+    //   document.getElementById("demo").innerHTML = text.replace(
+    //     /MICROSOFT/i,
+    //     "W3Schools"
+    //   );
+    // }
+    function myFunction() {
+      let text = document.getElementById("demo").innerHTML;
+      document.getElementById("demo").innerHTML = text.replace(
+        "Microsoft",
+        "W3Schools"
+      );
+    }
+
+    //***********************Replace all*********************
+    function ReplaceAll() {
+      let text = document.getElementById("demoAll").innerHTML;
+      //   document.getElementById("demoAll").innerHTML = text.replaceAll(
+      //     "Cats",
+      //     "Dogs"
+      //   );
+
+      document.getElementById("demoAll").innerHTML = text.replaceAll(
+        /Cats/g,
+        "Dogs"
+      );
+    }
+
+    //********************split************************
+    let text9 = "a,b,c,d,e,f";
+    const myArray = text9.split(",");
+    document.getElementById("split").innerHTML = myArray[0];
+  </script>
+</html>

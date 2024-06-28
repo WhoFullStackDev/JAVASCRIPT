@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Strings</h1>
+    <h2>The indexOf() Method</h2>
+
+    <p>The position of the first occurrence of "locate" is:</p>
+    <p id="indexOf"></p>
+    <h2>The lastIndexOf() Method</h2>
+    <p>The position of the first occurrence of "locate" is:</p>
+    <p id="lastIndex"></p>
+    <p>Both indexOf() and lastIndexOf() return -1 if the text is not found:</p>
+    <p>This is indexOf method for not exist word</p>
+    <p id="notFoundWord"></p>
+    <p>This is lastIndexOf method for not exist word</p>
+
+    <p id="notFoundWordForLastIndex"></p>
+    <h2>Search method</h2>
+    <p id="search"></p>
+    <h2>Match method</h2>
+    <p id="match"></p>
+    <h2>Match All method</h2>
+    <p id="matchAll"></p>
+
+    <h2>Include method</h2>
+    <p id="include"></p>
+
+    <h2>startWith</h2>
+    <p id="startWith"></p>
+
+    <h2>Endwith</h2>
+    <p id="endwith"></p>
+    <script>
+      let text = "Please locate where 'locate' occurs!";
+
+      //*****************indexOf*****************
+      //   let index = text.indexOf("locate");
+      let index = text.indexOf("locate", 15);
+      let notFoundWord = text.indexOf("jhon");
+      document.getElementById("notFoundWord").innerHTML = notFoundWord;
+      document.getElementById("indexOf").innerHTML = index;
+
+      // ***************lastIndexOf************
+      //   let lastIndex = text.lastIndexOf("locate");
+      let lastIndex = text.lastIndexOf("locate", 15);
+      let notFoundWordForLastIndex = text.lastIndexOf("jhon");
+      document.getElementById("notFoundWordForLastIndex").innerHTML =
+        notFoundWordForLastIndex;
+      document.getElementById("lastIndex").innerHTML = lastIndex;
+
+      //   *********************Search*************************
+      //   let search = text.search("locate");
+      let search = text.search(/locate/);
+      document.getElementById("search").innerHTML = search;
+
+      //**************Match****************
+
+      let text1 = '"The rain in SPAIN stays mainly in the plain";';
+      //   let match = text1.match("ain");
+      let match = text1.match(/ain/);
+
+      // Global Search
+      //   let match = text.match(/ain/g);
+
+      // Case insensitive search
+      //   let match = text.match(/ain/gi);
+      document.getElementById("match").innerHTML = match.length + " " + match;
+
+      //**************************MatchAll****************
+      let text2 =
+        "I love cats. Cats are very easy to love. Cats are very popular.";
+      const iterator = text2.matchAll("Cats");
+
+      document.getElementById("matchAll").innerHTML = Array.from(iterator);
+
+      // -****************Include********************
+      let text3 = "Hello world, welcome to the universe.";
+      // document.getElementById("include").innerHTML = text3.includes("world");
+      document.getElementById("include").innerHTML = text3.includes(
+        "world",
+        12
+      );
+
+      // *******************startWith*************
+      let tex = "Hello world, welcome to the universe.";
+      // document.getElementById("startWith").innerHTML = tex.startsWith("Hello");
+      document.getElementById("startWith").innerHTML = tex.startsWith(
+        "world",
+        6
+      );
+
+      //************************Endwith***************
+      let te = "Hello world, welcome to the universe.";
+      // document.getElementById("endwith").innerHTML = te.endsWith("universe.");
+      document.getElementById("endwith").innerHTML = te.endsWith("world", 11);
+    </script>
+  </body>
+</html>
