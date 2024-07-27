@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Numbers</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h1>Integer Point Precision</h1>
+    <p id="Integer"></p>
+    <h1>Floating Point Precision</h1>
+    <p>Floating point arithmetic is not always 100% accurate.</p>
+    <p id="Floating1"></p>
+    <p>But it helps to multiply and divide:</p>
+    <p id="Floating2"></p>
+    <p>If you add two numbers, the result will be a number:</p>
+    <p id="sum"></p>
+    <p>A common mistake is to expect this result to be 30:</p>
+
+    <p id="mistake"></p>
+    <strong
+      >If you add a number and a numeric string, the result will be a
+      concatenated string:</strong
+    >
+    <p id="sum1"></p>
+    <p>JavaScript will try to convert strings to numbers when dividing:</p>
+    <p id="StringToNumberAutoConvert"></p>
+
+    <p>JavaScript will try to convert strings to numbers when multiplying:</p>
+
+    <p id="StringToNumberAutoConvert1"></p>
+    <p>JavaScript will try to convert strings to numbers when subtracting:</p>
+    <p id="StringToNumberAutoConvert2"></p>
+    <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+    <p id="NanDisplay"></p>
+    <p>A number divided by a numeric string becomes a number:</p>
+    <p id="NumericDivideByNumericString"></p>
+    <p>
+      If you use NaN in a mathematical operation, the result will also be NaN:
+    </p>
+
+    <p id="NanSumWithNumeric"></p>
+    <p>The typeof NaN is number:</p>
+    <p id="TypeOfNan"></p>
+    <p>Division by zero generates Infinity;</p>
+
+    <p id="generatesInfinity"></p>
+    <p>Infinity is a number:</p>
+    <p id="TypeOfInfinity"></p>
+    <h1>Hexadecimal</h1>
+    <p id="Hexadecimal"></p>
+    <p>The toString() method can output numbers from base 2 to 36:</p>
+    <p id="toString"></p>
+    <p>Convert a number into object</p>
+    <p id="NumberToObject"></p>
+  </body>
+  <script>
+    // let x = 3.14;
+    // let y = 3;
+    let x = 123e5;
+    let y = 123e-5;
+    // document.getElementById("demo").innerHTML = x + "<br>" + y;
+
+    //******************Integer Precision*********
+    let a = 999999999999999;
+    let b = 9999999999999999;
+    document.getElementById("Integer").innerHTML = a + "<br>" + b;
+
+    //******************Floating Precision*********
+    let c = 0.2 + 0.1;
+    document.getElementById("Floating1").innerHTML = "0.2 + 0.1 = " + c;
+    let d = (0.2 * 10 + 0.1 * 10) / 10;
+    document.getElementById("Floating2").innerHTML = "0.2 + 0.1 = " + d;
+
+    let e = 10;
+    let f = 20;
+    let g = e + f;
+    document.getElementById("sum").innerHTML = g;
+    let h = 10;
+    let j = "20";
+    let k = h + j;
+    document.getElementById("sum1").innerHTML = k;
+    var r = 10;
+    var s = 20;
+    document.getElementById("mistake").innerHTML = "The result is: " + r + s;
+    let l = "100";
+    let m = "10";
+    let n = l / m;
+    document.getElementById("StringToNumberAutoConvert").innerHTML = n;
+    let o = "100";
+    let p = "10";
+    let q = o * p;
+    document.getElementById("StringToNumberAutoConvert1").innerHTML = q;
+    let t = "100";
+    let u = "10";
+    let v = t - u;
+    document.getElementById("StringToNumberAutoConvert2").innerHTML = v;
+    document.getElementById("NanDisplay").innerHTML = 100 / "Apple";
+    document.getElementById("NumericDivideByNumericString").innerHTML =
+      100 / "10";
+    document.getElementById("NanSumWithNumeric").innerHTML = 5 + NaN;
+
+    document.getElementById("TypeOfNan").innerHTML = typeof NaN;
+    document.getElementById("generatesInfinity").innerHTML = 3 / 0;
+    document.getElementById("TypeOfInfinity").innerHTML = typeof Infinity;
+
+    // ********************Hexadecimal*******************
+    document.getElementById("Hexadecimal").innerHTML = 0xff;
+    let myNumber = 32;
+    document.getElementById("toString").innerHTML =
+      "Decimal 32 = " +
+      "<br><br>" +
+      "Hexatrigesimal (base 36): " +
+      myNumber.toString(36) +
+      "<br>" +
+      "Duotrigesimal (base 32): " +
+      myNumber.toString(32) +
+      "<br>" +
+      "Hexadecimal (base 16): " +
+      myNumber.toString(16) +
+      "<br>" +
+      "Duodecimal (base 12): " +
+      myNumber.toString(12) +
+      "<br>" +
+      "Decimal (base 10): " +
+      myNumber.toString(10) +
+      "<br>" +
+      "Octal (base 8): " +
+      myNumber.toString(8) +
+      "<br>" +
+      "Binary (base 2): " +
+      myNumber.toString(2);
+
+    //   **********Create nmber to object****************
+    //Normally JavaScript numbers are primitive values created from literals:
+    let qw = 123;
+    //But numbers can also be defined as objects with the keyword new:
+    let ob = new Number(qw);
+    document.getElementById("NumberToObject").innerHTML =
+      typeof qw + "<br>" + typeof ob;
+  </script>
+</html>

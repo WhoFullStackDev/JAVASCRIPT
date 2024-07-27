@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Number Methods</title>
+  </head>
+  <body>
+    <h2>toString</h2>
+    <p>The toString() method converts a number to a string.</p>
+    <p id="toString"></p>
+    <h2>toExponential</h2>
+    <p>
+      The toExponential() method returns a string, with the number rounded and
+      written using exponential notation.
+    </p>
+
+    <p>
+      An optional parameter defines the number of digits behind the decimal
+      point.
+    </p>
+    <p id="toExponential"></p>
+    <h2>toFixed</h2>
+    <p>The toFixed() method rounds a number to a given number of digits.</p>
+    <p id="toFixed"></p>
+    <h2>toPrecision</h2>
+    <p>
+      The toPrecision() method returns a string, with a number written with a
+      specified length:
+    </p>
+    <p id="toPrecision"></p>
+    <h2>ValueOf</h2>
+    <p>The valueOf() method returns a number as a number:</p>
+
+    <p id="valueOf"></p>
+    <h2>Number</h2>
+    <p>The Number() method converts variables to numbers:</p>
+
+    <p id="number"></p>
+    <p>The Number() method can convert a date to a number:</p>
+
+    <p id="DateToNumber"></p>
+    <h2>ParseInt</h2>
+    <p>
+      The global JavaScript function parseInt() converts strings to numbers:
+    </p>
+
+    <p id="parseInt"></p>
+    <h2>parseFloat</h2>
+    <p>The parseFloat() method converts strings to numbers:</p>
+
+    <p id="parseFloat"></p>
+    <h2>isInteger</h2>
+    <p>The isInteger() method returns true if the argument is an integer.</p>
+    <p>Otherwise it returns false.</p>
+
+    <p id="isInteger"></p>
+    <h2>isSafeInteger</h2>
+    <p>
+      The isSafeInteger() method returns true if the argument is a safe integer.
+    </p>
+    <p>Otherwise it returns false.</p>
+
+    <p id="isSafeInteger"></p>
+    <h2>Number.parseFloat</h2>
+    <p>Number.parseFloat() converts strings to numbers:</p>
+    <p id="NumberParseFloat"></p>
+    <h2>Number.parseInt</h2>
+    <p>Number.parseInt() converts strings to whole numbers:</p>
+    <p id="NumberParseInt"></p>
+  </body>
+  <script>
+    //*************toString***********
+    let a = 124;
+    document.getElementById("toString").innerHTML =
+      a.toString() + "<br>" + (123).toString() + "<br>" + (100 + 23).toString();
+
+    // *************toExponential****************
+    let b = 9.656;
+    document.getElementById("toExponential").innerHTML =
+      b.toExponential() +
+      "<br>" +
+      b.toExponential(2) +
+      "<br>" +
+      b.toExponential(4) +
+      "<br>" +
+      b.toExponential(6);
+
+    //**********toFixed*********
+    let c = 9.656;
+    document.getElementById("toFixed").innerHTML =
+      c.toFixed(0) +
+      "<br>" +
+      c.toFixed(2) +
+      "<br>" +
+      c.toFixed(4) +
+      "<br>" +
+      c.toFixed(6);
+
+    //*************toPrecision***************
+    let d = 9.656;
+    document.getElementById("toPrecision").innerHTML =
+      d.toPrecision() +
+      "<br>" +
+      d.toPrecision(2) +
+      "<br>" +
+      d.toPrecision(4) +
+      "<br>" +
+      d.toPrecision(6);
+
+    //*****************ValueOf**********
+    let e = 123;
+
+    document.getElementById("valueOf").innerHTML =
+      e.valueOf() + "<br>" + (123).valueOf() + "<br>" + (100 + 23).valueOf();
+
+    // *****************Number*************
+    document.getElementById("number").innerHTML =
+      Number(true) +
+      "<br>" +
+      Number(false) +
+      "<br>" +
+      Number("10") +
+      "<br>" +
+      Number("  10") +
+      "<br>" +
+      Number("10  ") +
+      "<br>" +
+      Number(" 10  ") +
+      "<br>" +
+      Number("10.33") +
+      "<br>" +
+      Number("10,33") +
+      "<br>" +
+      Number("10 33") +
+      "<br>" +
+      Number("John");
+    let f = new Date("2017-09-30");
+    document.getElementById("DateToNumber").innerHTML = Number(f);
+
+    // *************ParseInt****************
+    document.getElementById("parseInt").innerHTML =
+      parseInt("-10") +
+      "<br>" +
+      parseInt("-10.33") +
+      "<br>" +
+      parseInt("10") +
+      "<br>" +
+      parseInt("10.33") +
+      "<br>" +
+      parseInt("10 6") +
+      "<br>" +
+      parseInt("10 years") +
+      "<br>" +
+      parseInt("years 10");
+
+    //****************parseFloat***********
+    document.getElementById("parseFloat").innerHTML =
+      parseFloat("10") +
+      "<br>" +
+      parseFloat("10.33") +
+      "<br>" +
+      parseFloat("10 6") +
+      "<br>" +
+      parseFloat("10 years") +
+      "<br>" +
+      parseFloat("years 10");
+
+    //**************isInteger********
+    document.getElementById("isInteger").innerHTML =
+      Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+
+    //***************isSafeInteger**********
+    document.getElementById("isSafeInteger").innerHTML =
+      Number.isSafeInteger(10) +
+      "<br>" +
+      Number.isSafeInteger(12345678901234567890);
+
+    //***************Number.parseFloat**********
+    document.getElementById("NumberParseFloat").innerHTML =
+      Number.parseFloat("10") +
+      "<br>" +
+      Number.parseFloat("10.33") +
+      "<br>" +
+      Number.parseFloat("10 20 30") +
+      "<br>" +
+      Number.parseFloat("10 years") +
+      "<br>" +
+      Number.parseFloat("years 10");
+
+    //***********Number.parseInt**********
+    document.getElementById("NumberParseInt").innerHTML =
+      Number.parseInt("-10") +
+      "<br>" +
+      Number.parseInt("-10.33") +
+      "<br>" +
+      Number.parseInt("10") +
+      "<br>" +
+      Number.parseInt("10.33") +
+      "<br>" +
+      Number.parseInt("10 6") +
+      "<br>" +
+      Number.parseInt("10 years") +
+      "<br>" +
+      Number.parseInt("years 10");
+  </script>
+</html>
