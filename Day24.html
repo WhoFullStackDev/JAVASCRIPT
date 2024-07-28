@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Arrays</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h2>Accessing Array Elements</h2>
+    <p>
+      JavaScript array elements are accessed using numeric indexes (starting
+      from 0).
+    </p>
+    <p id="BracketIndexing"></p>
+    <h2>Changing an Array Element</h2>
+    <p id="BracketIndexing1"></p>
+    <h2>Converting an Array to a String</h2>
+    <p id="ConvertingAnString"></p>
+    <h2>Access the Full Array</h2>
+    <p id="accessFullArray"></p>
+    <h2>The length Property</h2>
+    <p id="length"></p>
+    <h2>Accessing the First Array Element</h2>
+    <p id="FirstElement"></p>
+    <h2>Accessing the Last Array Element</h2>
+    <p id="LastElement"></p>
+    <h2>Adding Array Elements</h2>
+    <button onclick="myFunction()">Add</button>
+    <p id="AddElements"></p>
+    <h2>How to Recognize an Array</h2>
+    <h3>Solution</h3>
+    <p id="solution"></p>
+    <h3>Solution1</h3>
+    <p id="solution1"></p>
+    <h3>Solution2</h3>
+    <p id="solution2"></p>
+  </body>
+  <script>
+    // const cars = ["Saab", "Volvo", "BMW"];
+    // const cars = [];
+    // cars[0] = "Saab";
+    // cars[1] = "Volvo";
+    // cars[2] = "BMW";
+    const cars = new Array("Saab", "Volvo", "BMW");
+
+    document.getElementById("demo").innerHTML = cars;
+
+    //**************Accessing Array Elements**********
+    document.getElementById("BracketIndexing").innerHTML = cars[0];
+
+    //***************Changing an Array Element*************
+    cars[0] = "Opel";
+    document.getElementById("BracketIndexing1").innerHTML = cars[0];
+
+    //**************Converting an Array to a String********
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("ConvertingAnString").innerHTML = fruits.toString();
+
+    //*****************Access the Full Array***********
+    document.getElementById("accessFullArray").innerHTML = cars;
+
+    //***********************The length Property***************
+    const size = fruits.length;
+    document.getElementById("length").innerHTML = size;
+
+    //*****************Accessing the First Array Element********
+    document.getElementById("FirstElement").innerHTML = fruits[0];
+
+    //******************Accessing the Last Array Element****************
+    document.getElementById("LastElement").innerHTML =
+      fruits[fruits.length - 1];
+
+    // ******************Adding Array Elements******************
+    document.getElementById("AddElements").innerHTML = fruits;
+
+    function myFunction() {
+      // fruits.push("Lemon");
+      fruits[fruits.length] = "Lemon";
+      document.getElementById("AddElements").innerHTML = fruits;
+    }
+
+    //******************How to Recognize an Array******************
+    // ******************Solution******************
+    document.getElementById("solution").innerHTML = typeof fruits;
+    // ******************Solution1******************
+    document.getElementById("solution1").innerHTML = Array.isArray(fruits);
+    // ******************Solution2******************
+
+    document.getElementById("solution2").innerHTML = fruits instanceof Array;
+
+    //  ******************Nested Arrays and Objects******************
+    const myObj = {
+      name: "John",
+      age: 30,
+      cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] },
+      ],
+    };
+  </script>
+</html>

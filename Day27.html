@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Sorting Arrays</title>
+  </head>
+  <body>
+    <h2>Sorting an Array</h2>
+    <p id="sort1"></p>
+    <p id="sort2"></p>
+    <h2>Reversing an Array</h2>
+    <p id="reverse1"></p>
+    <p id="reverse2"></p>
+    <h2>JavaScript Array toSorted</h2>
+    <p id="toSorted"></p>
+    <h2>JavaScript Array toReversed</h2>
+    <p id="toReversed"></p>
+    <h2>Numeric Sort</h2>
+    <p id="NumericSort1"></p>
+    <p id="NumericSort2"></p>
+    <h2>Sorting an Array in Random Order</h2>
+    <button onclick="myFunction()">Try it</button>
+    <p id="RandomOrder"></p>
+    <h2>Sort Ascending</h2>
+    <p id="Ascending"></p>
+    <h2>Sort Descending</h2>
+    <p id="Descending"></p>
+    <h2>Using Math.min on an Array</h2>
+    <p id="MathMin"></p>
+    <h2>Using Math.max on an Array</h2>
+    <p id="MathMax"></p>
+    <h2>Sorting Object Arrays</h2>
+    <p id="SortingObjectArrays"></p>
+  </body>
+  <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    //****************Sorting an Array****************
+    document.getElementById("sort1").innerHTML = fruits;
+
+    fruits.sort();
+    document.getElementById("sort2").innerHTML = fruits;
+
+    //****************Reversing an Array****************
+    document.getElementById("reverse1").innerHTML = fruits;
+
+    // Reverse the array:
+    fruits.reverse();
+
+    document.getElementById("reverse2").innerHTML = fruits;
+
+    //****************JavaScript Array toSorted****************
+    const months = ["Jan", "Feb", "Mar", "Apr"];
+    const sorted = months.toSorted();
+
+    document.getElementById("toSorted").innerHTML = sorted;
+    //****************JavaScript Array toReversed****************
+    const reversed = months.toReversed();
+    document.getElementById("toReversed").innerHTML = reversed;
+
+    //****************Numeric Sort****************
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("NumericSort1").innerHTML = points;
+
+    points.sort(function (a, b) {
+      return a - b;
+    });
+    document.getElementById("NumericSort2").innerHTML = points;
+
+    //****************Sorting an Array in Random Order****************
+    document.getElementById("RandomOrder").innerHTML = points;
+
+    function myFunction() {
+      //This is not accurate
+      //   points.sort(function () {
+      //     return 0.5 - Math.random();
+      //   });
+      //This is accurate
+      for (let i = points.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let k = points[i];
+        points[i] = points[j];
+        points[j] = k;
+      }
+      document.getElementById("RandomOrder").innerHTML = points;
+    }
+
+    //****************Sort Ascending****************
+
+    points.sort(function (a, b) {
+      return a - b;
+    });
+    document.getElementById("Ascending").innerHTML = points[0];
+
+    //****************Sort Descending****************
+
+    points.sort(function (a, b) {
+      return b - a;
+    });
+    document.getElementById("Descending").innerHTML = points[0];
+
+    //****************Using Math.min on an Array****************
+    document.getElementById("MathMin").innerHTML = myArrayMin(points);
+
+    function myArrayMin(arr) {
+      return Math.min.apply(null, arr);
+    }
+
+    //****************Using Math.max on an Array****************
+    document.getElementById("MathMax").innerHTML = myArrayMax(points);
+
+    function myArrayMax(arr) {
+      return Math.max.apply(null, arr);
+    }
+
+    //****************Sorting Object Arrays****************
+    const cars = [
+      { type: "Volvo", year: 2016 },
+      { type: "Saab", year: 2001 },
+      { type: "BMW", year: 2010 },
+    ];
+
+    displayCars();
+
+    cars.sort(function (a, b) {
+      return a.year - b.year;
+    });
+    displayCars();
+
+    function displayCars() {
+      document.getElementById("SortingObjectArrays").innerHTML =
+        cars[0].type +
+        " " +
+        cars[0].year +
+        "<br>" +
+        cars[1].type +
+        " " +
+        cars[1].year +
+        "<br>" +
+        cars[2].type +
+        " " +
+        cars[2].year;
+    }
+  </script>
+</html>
