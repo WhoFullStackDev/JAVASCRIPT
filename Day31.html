@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Date Formats</title>
+  </head>
+  <body>
+    <h2>JavaScript ISO Dates</h2>
+    <p id="ISO"></p>
+    <h2>JavaScript Short Dates.</h2>
+    <p id="Short"></p>
+    <h2>JavaScript Long Dates.</h2>
+    <p id="Long"></p>
+    <h2>Date Input - Parsing Dates</h2>
+    <p id="demo"></p>
+  </body>
+  <script>
+    //************JavaScript ISO Dates************
+    // const d = new Date("2024-03-25");
+    // const d = new Date("2024-03");
+    // const d = new Date("2024");
+    const d = new Date("2015-03-25T12:00:00Z");
+    document.getElementById("ISO").innerHTML = d;
+
+    //************JavaScript Short Dates.************
+    // const da = new Date("03/25/2015");
+    // const da = new Date("2015-3-25");
+    const da = new Date("2015/03/25");
+    document.getElementById("Short").innerHTML = da;
+
+    //.************JavaScript Long Dates..************
+    // const dae = new Date("Mar 25 2015");
+    // const dae = new Date("25 Mar 2015");
+    // const dae = new Date("January 25 2015");
+    //const dae = new Date("Jan 25 2015");
+    const dae = new Date("JANUARY, 25, 2015");
+    document.getElementById("Long").innerHTML = dae;
+
+    //..************Date Input - Parsing Dates..************
+    let msec = Date.parse("March 21, 2012");
+    const date = new Date(msec);
+    document.getElementById("demo").innerHTML = date;
+  </script>
+</html>

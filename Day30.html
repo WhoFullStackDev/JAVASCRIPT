@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Date Objects</title>
+  </head>
+  <body>
+    <h2>JavaScript new Date</h2>
+    <p id="newDate"></p>
+    <h2>new Date(date string)</h2>
+    <p id="DateString"></p>
+    <h2>new Date(year, month, ...)</h2>
+    <p id="DateYearMonth"></p>
+    <h2>Using 6, 4, 3, or 2 Numbers</h2>
+    <p id="6432"></p>
+    <p id="64321"></p>
+    <p id="64322"></p>
+    <p id="64323"></p>
+    <p id="64324"></p>
+    <h2>Previous Century</h2>
+    <p id="Century"></p>
+    <h2>new Date(milliseconds)</h2>
+    <p id="mill1"></p>
+    <p id="mill2"></p>
+    <p id="mill3"></p>
+    <p id="mill4"></p>
+    <h2>Displaying Dates</h2>
+    <h3>Using new Date</h3>
+    <p id="d1"></p>
+    <h3>The toString() Method</h3>
+    <p id="d2"></p>
+    <h3>The toDateString() Method</h3>
+    <p id="d3"></p>
+    <h3>The toUTCString() Method</h3>
+    <p id="d4"></p>
+    <h3>The toISOString() Method</h3>
+    <p id="d5"></p>
+  </body>
+  <script>
+    //****************JavaScript new Date****************
+    const d = new Date();
+    document.getElementById("newDate").innerHTML = d;
+    //****************new Date(date string)****************
+    // const da = new Date("October 13, 2014 11:13:00");
+    const da = new Date("2022-03-25");
+    document.getElementById("DateString").innerHTML = da;
+    //****************new Date(year, month, ...)****************
+    const dat = new Date(2018, 11, 24, 10, 33, 30, 0);
+    document.getElementById("DateYearMonth").innerHTML = dat;
+
+    //****************Using 6, 4, 3, or 2 Numbers****************
+    // 6 numbers specify year, month, day, hour, minute, second:
+    let date = new Date(2018, 11, 24, 10, 33, 30);
+    document.getElementById("6432").innerHTML = date;
+    // 5 numbers specify year, month, day, hour, and minute:
+    date = new Date(2018, 11, 24, 10, 33);
+    document.getElementById("64321").innerHTML = date;
+    // 4 numbers specify year, month, day, and hour:
+    date = new Date(2018, 11, 24, 10);
+    document.getElementById("64322").innerHTML = date;
+    //3 numbers specify year, month, and day:
+    date = new Date(2018, 11, 24);
+    document.getElementById("64323").innerHTML = date;
+
+    //2 numbers specify year, month:
+    date = new Date(2018, 11);
+    document.getElementById("64324").innerHTML = date;
+
+    //****************Previous Century****************
+    // const Century = new Date(99, 11, 24);
+    const Century = new Date(9, 11, 24);
+    document.getElementById("Century").innerHTML = Century;
+
+    //new Date(milliseconds)
+    // 01 January 1970 plus 100 000 000 000 milliseconds is:
+    let mill = new Date(100000000000);
+    document.getElementById("mill1").innerHTML = mill;
+    //January 01 1970 minus 100 000 000 000 milliseconds is:
+    mill = new Date(-100000000000);
+
+    document.getElementById("mill2").innerHTML = mill;
+    //January 01 1970 plus 24 hours is:
+    mill = new Date(24 * 60 * 60 * 1000);
+    //or
+    mill = new Date(86400000);
+    document.getElementById("mill3").innerHTML = mill;
+    // 01 January 1970 plus 0 milliseconds is:
+    mill = new Date(0);
+    document.getElementById("mill4").innerHTML = mill;
+
+    //****************Displaying Dates****************
+    //Using new Date()
+    const d1 = new Date();
+    document.getElementById("d1").innerHTML = d1;
+    //The toString() Method
+    document.getElementById("d2").innerHTML = d1.toString();
+    //The toDateString() Method
+    document.getElementById("d3").innerHTML = d1.toDateString();
+    //The toUTCString() Method
+    document.getElementById("d4").innerHTML = d1.toUTCString();
+    //The toISOString() Method
+    document.getElementById("d5").innerHTML = d1.toISOString();
+  </script>
+</html>

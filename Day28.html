@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Array Iteration</title>
+  </head>
+  <body>
+    <h2>JavaScript Array forEach</h2>
+    <p id="ForEach"></p>
+    <h2>JavaScript Array map</h2>
+    <p id="map"></p>
+    <h2>JavaScript Array flatMap</h2>
+    <p id="flatMap"></p>
+    <h2>JavaScript Array filter</h2>
+    <p id="filter"></p>
+    <h2>JavaScript Array reduce</h2>
+    <p id="reduce"></p>
+    <h2>JavaScript Array reduceRight</h2>
+    <p id="reduceRight"></p>
+    <h2>JavaScript Array every</h2>
+    <p id="every"></p>
+    <h2>JavaScript Array some</h2>
+    <p id="some"></p>
+    <h2>JavaScript Array.from</h2>
+    <p id="from"></p>
+    <h2>JavaScript Array keys</h2>
+    <p id="keys"></p>
+    <h2>JavaScript Array entries</h2>
+    <p id="entries"></p>
+    <h2>JavaScript Array with</h2>
+    <p id="with"></p>
+    <h2>JavaScript Array Spread</h2>
+    <p id="Spread"></p>
+  </body>
+  <script>
+    const numbers = [45, 4, 9, 16, 25];
+
+    // ******************JavaScript Array forEach******************
+    let txt = "";
+    numbers.forEach(myFunction);
+    document.getElementById("ForEach").innerHTML = txt;
+
+    function myFunction(value, index, array) {
+      txt += value + "<br>";
+    }
+
+    //******************JavaScript Array map******************
+    const numbers1 = [45, 4, 9, 16, 25];
+    const numbers2 = numbers1.map(myFunction);
+
+    document.getElementById("map").innerHTML = numbers2;
+
+    function myFunction(value, index, array) {
+      return value * 2;
+    }
+    // ******************JavaScript Array flatMap******************
+    const myArr = [1, 2, 3, 4, 5, 6];
+    const newArr = myArr.flatMap((x) => x * 2);
+    document.getElementById("flatMap").innerHTML = newArr;
+
+    //******************JavaScript Array filter******************
+    const age = [45, 4, 9, 16, 25];
+    const over18 = age.filter(myFunction);
+
+    document.getElementById("filter").innerHTML = over18;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+    // ******************JavaScript Array reduce******************
+
+    let sum = numbers.reduce(myFunction);
+    document.getElementById("reduce").innerHTML = "The sum is " + sum;
+    function myFunction(total, value, index, array) {
+      return total + value;
+    }
+
+    //******************JavaScript Array reduceRight******************
+
+    //The reduceRight() works from right-to-left in the array
+    let sum1 = numbers.reduceRight(myFunction);
+
+    document.getElementById("reduceRight").innerHTML = "The sum is " + sum1;
+
+    function myFunction(total, value, index, array) {
+      return total + value;
+    }
+
+    //******************JavaScript Array every******************
+    let allOver18 = numbers.every(myFunction);
+
+    document.getElementById("every").innerHTML = "All over 18 is " + allOver18;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+    // ******************JavaScript Array some******************
+    let someOver18 = numbers.some(myFunction);
+
+    document.getElementById("some").innerHTML = "Some over 18 is " + someOver18;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+    //******************JavaScript Array.from******************
+    const myArr1 = Array.from("ABCDEFG");
+    document.getElementById("from").innerHTML = myArr1;
+
+    //******************JavaScript Array keys******************
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const keys = fruits.keys();
+
+    let text = "";
+    for (let x of keys) {
+      text += x + "<br>";
+    }
+
+    document.getElementById("keys").innerHTML = text;
+
+    //******************JavaScript Array entries******************
+    const f = fruits.entries();
+
+    for (let x of f) {
+      document.getElementById("entries").innerHTML += x + "<br>";
+    }
+
+    //******************JavaScript Array with******************
+    const months = ["Januar", "Februar", "Mar", "April"];
+    const myMonths = months.with(2, "March");
+
+    document.getElementById("with").innerHTML = myMonths;
+
+    //******************JavaScript Array Spread******************
+    const q1 = ["Jan", "Feb", "Mar"];
+    const q2 = ["Apr", "May", "Jun"];
+    const q3 = ["Jul", "Aug", "Sep"];
+    const q4 = ["Oct", "Nov", "May"];
+
+    const year = [...q1, ...q2, ...q3, ...q4];
+    document.getElementById("Spread").innerHTML = year;
+  </script>
+</html>
