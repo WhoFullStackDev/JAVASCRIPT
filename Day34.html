@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Math Object</title>
+  </head>
+  <body>
+    <h2>Math Properties (Constants)</h2>
+    <p id="Properties"></p>
+    <h2>Math.round()</h2>
+    <p id="round"></p>
+    <h2>Math.ceil()</h2>
+    <p id="ceil"></p>
+    <h2>Math.floor()</h2>
+    <p id="floor"></p>
+    <h2>Math.trunc()</h2>
+    <p id="trunc"></p>
+    <h2>Math.sign()</h2>
+    <p id="sign"></p>
+    <h2>Math.pow()</h2>
+    <p id="pow"></p>
+    <h2>Math.sqrt()</h2>
+    <p id="sqrt"></p>
+    <h2>Math.abs()</h2>
+    <p id="abs"></p>
+    <h2>Math.sin()</h2>
+    <p id="sin"></p>
+    <h2>Math.cos()</h2>
+    <p id="cos"></p>
+    <h2>Math.min() and Math.max()</h2>
+    <p id="min"></p>
+    <p id="max"></p>
+    <h2>The Math.log() Method</h2>
+    <p id="log"></p>
+    <h2>The Math.log2() Method</h2>
+    <p id="log2"></p>
+    <h2>The Math.log10() Method</h2>
+    <p id="log10"></p>
+  </body>
+  <script>
+    // ***************Math Properties (Constants)***************
+    document.getElementById("Properties").innerHTML =
+      "<p><b>Math.E:</b> " +
+      Math.E +
+      "</p>" +
+      "<p><b>Math.PI:</b> " +
+      Math.PI +
+      "</p>" +
+      "<p><b>Math.SQRT2:</b> " +
+      Math.SQRT2 +
+      "</p>" +
+      "<p><b>Math.SQRT1_2:</b> " +
+      Math.SQRT1_2 +
+      "</p>" +
+      "<p><b>Math.LN2:</b> " +
+      Math.LN2 +
+      "</p>" +
+      "<p><b>Math.LN10:</b> " +
+      Math.LN10 +
+      "</p>" +
+      "<p><b>Math.LOG2E:</b> " +
+      Math.LOG2E +
+      "</p>" +
+      "<p><b>Math.Log10E:</b> " +
+      Math.LOG10E +
+      "</p>";
+
+    // ***************Math.round()***************
+    document.getElementById("round").innerHTML = Math.random(4.6);
+
+    // ***************Math.ceil()***************
+    document.getElementById("ceil").innerHTML = Math.ceil(4.4);
+
+    // ***************Math.floor()***************
+    document.getElementById("floor").innerHTML = Math.floor(4.7);
+
+    // ***************Math.trunc()***************
+    document.getElementById("trunc").innerHTML = Math.trunc(4.7);
+
+    // ***************Math.sign()***************
+    document.getElementById("sign").innerHTML = Math.sign(4);
+
+    // ***************Math.pow()***************
+    document.getElementById("pow").innerHTML = Math.pow(8, 2);
+
+    // ***************Math.sqrt()***************
+    document.getElementById("sqrt").innerHTML = Math.sqrt(64);
+
+    // ***************Math.abs()***************
+    document.getElementById("abs").innerHTML = Math.abs(-4.7);
+
+    // ***************Math.sin()***************
+    document.getElementById("sin").innerHTML =
+      "The sine value of 90 degrees is " + Math.sin((90 * Math.PI) / 180);
+
+    // ***************Math.cos()***************
+    document.getElementById("cos").innerHTML =
+      "The cosine value of 0 degrees is " + Math.cos((0 * Math.PI) / 180);
+
+    // ***************Math.min() and Math.max()***************
+    document.getElementById("min").innerHTML = Math.min(
+      0,
+      150,
+      30,
+      20,
+      -8,
+      -200
+    );
+    document.getElementById("max").innerHTML = Math.max(
+      0,
+      150,
+      30,
+      20,
+      -8,
+      -200
+    );
+    // ***************Math.random()***************
+    document.getElementById("random").innerHTML = Math.random();
+
+    // ***************The Math.log() Method***************
+    document.getElementById("log").innerHTML = Math.log(1);
+
+    // ***************The Math.log2() Method***************
+    document.getElementById("log2").innerHTML = Math.log2(8);
+
+    // ***************The Math.log10() Method***************
+    document.getElementById("log10").innerHTML = Math.log10(1000);
+  </script>
+</html>

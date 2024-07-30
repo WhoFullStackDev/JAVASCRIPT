@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Set Date Methods</title>
+  </head>
+  <body>
+    <h2>The setFullYear() Method</h2>
+    <p id="FullYear"></p>
+    <h2>The setMonth() Method</h2>
+    <p id="Month"></p>
+    <h2>The setDate() Method</h2>
+    <p id="Date"></p>
+    <h2>The setHours() Method</h2>
+    <p id="Hours"></p>
+    <h2>The setMinutes() Method</h2>
+    <p id="Minutes"></p>
+    <h2>The setSeconds() Method</h2>
+    <p id="Seconds"></p>
+  </body>
+  <script>
+    //***************The setFullYear() Method***************
+    const year = new Date();
+    // year.setFullYear(2020);
+    year.setFullYear(2020, 11, 3);
+    document.getElementById("FullYear").innerHTML = year;
+
+    //***************The setMonth() Method***************
+    const month = new Date();
+    month.setMonth(11);
+    document.getElementById("Month").innerHTML = month;
+
+    //***************The setDate() Method***************
+    const date = new Date();
+    // date.setDate(15);
+    date.setDate(date.getDate() + 50);
+    document.getElementById("Date").innerHTML = date;
+
+    //***************The setHours() Method***************
+    const hour = new Date();
+    hour.setHours(22);
+    document.getElementById("Hours").innerHTML = hour;
+
+    //***************The setMinutes() Method***************
+    const minute = new Date();
+    minute.setMinutes(22);
+    document.getElementById("Minutes").innerHTML = minute;
+
+    //***************The setSeconds() Method***************
+    const seconds = new Date();
+    seconds.setSeconds(22);
+    document.getElementById("Seconds").innerHTML = seconds;
+  </script>
+</html>

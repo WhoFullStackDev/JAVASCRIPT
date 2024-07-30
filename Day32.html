@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Get Date Methods</title>
+  </head>
+  <body>
+    <h2>Get the Current Time</h2>
+    <p id="Current"></p>
+    <h2>The getFullYear() Method</h2>
+    <p id="FullYear"></p>
+    <h2>The getMonth() Method</h2>
+    <p id="Month"></p>
+    <h2>The getDate() Method</h2>
+    <p id="Date"></p>
+    <h2>The getHours() Method</h2>
+    <p id="Hours"></p>
+    <h2>The getMinutes() Method</h2>
+    <p id="Minutes"></p>
+    <h2>The getSeconds() Method</h2>
+    <p id="Seconds"></p>
+    <h2>The getMilliseconds() Method</h2>
+    <p id="Milliseconds"></p>
+    <h2>The getDay() Method</h2>
+    <p id="Day"></p>
+    <h2>The getTime() Method</h2>
+    <p id="Time"></p>
+    <h2>The Date.now() Method</h2>
+    <p id="demo"></p>
+  </body>
+  <script>
+    //***************Get the Current Time***************
+    const d = new Date();
+    document.getElementById("Current").innerHTML = d;
+
+    //***************The getFullYear() Method***************
+    // const year = new Date("2021-03-25");
+    const year = new Date();
+    document.getElementById("FullYear").innerHTML = year.getFullYear();
+
+    //***************The getMonth() Method***************
+    // const month = new Date("2021-03-25");
+    const month = new Date();
+    document.getElementById("Month").innerHTML = month.getMonth();
+
+    //***************The getDate() Method***************
+    // const date = new Date("2021-03-25");
+    const date = new Date();
+    document.getElementById("Date").innerHTML = date.getDate();
+
+    //***************The getHours() Method***************
+    // const hour = new Date("2021-03-25");
+    const hour = new Date();
+    document.getElementById("Hours").innerHTML = hour.getHours();
+
+    // ***************The getMinutes()Method***************
+    // const minutes = new Date("2021-03-25");
+    const minutes = new Date();
+    document.getElementById("Minutes").innerHTML = minutes.getMinutes();
+
+    //***************The getSeconds() Method***************
+    // const seconds = new Date("2021-03-25");
+    const seconds = new Date();
+    document.getElementById("Seconds").innerHTML = seconds.getSeconds();
+
+    //***************The getMilliseconds() Method***************
+    // const milliseconds = new Date("2021-03-25");
+    const milliseconds = new Date();
+    document.getElementById("Milliseconds").innerHTML =
+      milliseconds.getMilliseconds();
+
+    //***************The getDay() Method***************
+    // const Day = new Date("2021-03-25");
+    const Day = new Date();
+    document.getElementById("Day").innerHTML = Day.getDay();
+
+    //*************** The getTime() Method***************
+    // const time = new Date("2021-03-25");
+    const time = new Date();
+    document.getElementById("Time").innerHTML = time.getTime();
+
+    //***************The Date.now() Method ***************
+    const dateNow = Date.now();
+    document.getElementById("demo").innerHTML = dateNow;
+  </script>
+</html>
