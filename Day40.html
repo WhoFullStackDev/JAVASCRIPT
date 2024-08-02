@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript For In</title>
+  </head>
+  <body>
+    <h2>For In Loops</h2>
+
+    <p id="demo"></p>
+  </body>
+  <script>
+    const numbers = [45, 4, 9, 16, 25];
+
+    let txt = "";
+    for (let x in numbers) {
+      txt += numbers[x] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = txt;
+  </script>
+</html>
