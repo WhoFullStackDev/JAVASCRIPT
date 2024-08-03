@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h2>The instanceOf Operator</h2>
+    <p id="instanceof"></p>
+    <h2>The typeof Operator</h2>
+    <p id="typeof"></p>
+  </body>
+  <script>
+    // Create a Set
+    // const letters = new Set(["a","b","c"]);
+    const letters = new Set();
+
+    // Add Values to the Set
+    letters.add("a");
+    letters.add("b");
+    letters.add("c");
+    letters.add("c");
+    letters.add("c");
+    letters.add("c");
+    letters.add("c");
+    letters.add("c");
+
+    // Display the Size
+    document.getElementById("demo").innerHTML =
+      "The set has " + letters.size + " values.";
+    //The instanceOf Operator
+    document.getElementById("instanceof").innerHTML = letters instanceof Set;
+    // The typeof Operator
+
+    document.getElementById("typeof").innerHTML =
+      "The type of the set is " + typeof letters;
+  </script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Iterables</title>
+  </head>
+  <body>
+    <h2>Iterate over a String</h2>
+
+    <p id="string"></p>
+    <h2>Iterate over an Array</h2>
+
+    <p id="array"></p>
+    <h2>Iterate over a Set</h2>
+
+    <p id="set"></p>
+
+    <h2>Iterate over a Map</h2>
+
+    <p id="map"></p>
+  </body>
+  <script>
+    // Create a String
+    const name = "W3Schools";
+
+    // List all Elements
+    let text = "";
+    for (const x of name) {
+      text += x + "<br>";
+    }
+
+    document.getElementById("string").innerHTML = text;
+
+    // Create aa Array
+    const letters = ["a", "b", "c"];
+
+    // List all Elements
+    let text1 = "";
+    for (const x of letters) {
+      text1 += x + "<br>";
+    }
+
+    document.getElementById("array").innerHTML = text1;
+
+    // Create a Set
+    const letters1 = new Set(["a", "b", "c"]);
+
+    // List all Elements
+    let text2 = "";
+    for (const x of letters1) {
+      text2 += x + "<br>";
+    }
+
+    document.getElementById("set").innerHTML = text2;
+    // Create a Map
+    const fruits = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200],
+    ]);
+
+    // List all entries
+    let text3 = "";
+    for (const x of fruits) {
+      text3 += x + "<br>";
+    }
+
+    document.getElementById("map").innerHTML = text3;
+  </script>
+</html>

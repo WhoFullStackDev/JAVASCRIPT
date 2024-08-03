@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript While Loop</title>
+  </head>
+  <body>
+    <h2>While Loop</h2>
+    <p id="demo"></p>
+    <h2>Do While Loop</h2>
+    <p id="demo1"></p>
+  </body>
+  <script>
+    //**************While Loop**************
+    let text = "";
+    let i = 0;
+    while (i < 10) {
+      text += "<br>The number is " + i;
+      i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+    // **************Do While Loop**************
+    let text1 = "";
+    let ink = 0;
+
+    do {
+      text1 += "<br>The number is " + ink;
+      ink++;
+    } while (ink < 10);
+
+    document.getElementById("demo1").innerHTML = text;
+  </script>
+</html>
