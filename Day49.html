@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript typeof</title>
+  </head>
+  <body>
+    <h2>Primitive Data Types</h2>
+    <p id="Primitive"></p>
+    <h2>Complex Data Types</h2>
+    <p id="Complex"></p>
+    <h2>How to Recognize an Array</h2>
+    <p id="array"></p>
+    <h2>The instanceof Operator</h2>
+    <p id="instanceof"></p>
+    <h2>Undefined Variables</h2>
+    <p id="undefined"></p>
+    <h2>Null</h2>
+    <p id="null"></p>
+    <h2>The constructor Property</h2>
+    <p id="constructor"></p>
+  </body>
+  <script>
+    // Primitive Data Types
+    document.getElementById("Primitive").innerHTML =
+      "'John' is " +
+      typeof "John" +
+      "<br><br>" +
+      "('John' + 'Doe') is " +
+      typeof ("John" + "Doe") +
+      "<br><br>" +
+      "3.14 is " +
+      typeof 3.14 +
+      "<br><br>" +
+      "33 is " +
+      typeof (33 + 66) +
+      "<br><br>" +
+      "(33 + 66) is " +
+      typeof 33 +
+      "<br><br>" +
+      "NaN is " +
+      typeof NaN +
+      "<br><br>" +
+      "true is " +
+      typeof true +
+      "<br><br>" +
+      "false is " +
+      typeof false +
+      "<br><br>" +
+      "1234n is " +
+      typeof 1234n +
+      "<br><br>" +
+      "Symbol() is " +
+      typeof Symbol() +
+      "<br><br>" +
+      "x is " +
+      typeof x +
+      "<br><br>" +
+      "null is " +
+      typeof null;
+
+    //Complex Data Types
+    document.getElementById("Complex").innerHTML =
+      typeof { name: "John" } +
+      "<br>" +
+      typeof [1, 2, 3, 4] +
+      "<br>" +
+      typeof new Map() +
+      "<br>" +
+      typeof new Set() +
+      "<br>" +
+      typeof null +
+      "<br>" +
+      typeof function myFunc() {};
+
+    //How to Recognize an Array
+    const fruits = ["Banana", "Orange", "Apple"];
+    document.getElementById("array").innerHTML = Array.isArray(fruits);
+
+    //The instanceof Operator
+    document.getElementById("instanceof").innerHTML = fruits instanceof Array;
+
+    //Undefined Variables
+    let car;
+    document.getElementById("undefined").innerHTML = typeof car;
+
+    //Null
+    let person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 50,
+      eyeColor: "blue",
+    };
+
+    person = null;
+    document.getElementById("null").innerHTML =
+      "The typeof person is " + typeof person;
+
+    //The constructor Property
+    document.getElementById("constructor").innerHTML =
+      "john".constructor +
+      "<br>" +
+      (3.14).constructor +
+      "<br>" +
+      false.constructor +
+      "<br>" +
+      1234n.constructor +
+      "<br>" +
+      {}.constructor +
+      "<br>" +
+      [].constructor +
+      "<br>" +
+      new Date().constructor +
+      "<br>" +
+      new Set().constructor +
+      "<br>" +
+      new Map().constructor +
+      "<br>" +
+      function () {}.constructor;
+  </script>
+</html>

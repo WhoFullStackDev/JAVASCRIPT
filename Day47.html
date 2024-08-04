@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Maps</title>
+  </head>
+  <body>
+    <h2>The new Map() Method</h2>
+    <p id="new"></p>
+    <h2>The set() Method</h2>
+    <p id="set"></p>
+    <h2>The get() Method</h2>
+    <p id="get"></p>
+    <h2>Maps are Objects</h2>
+    <p id="typeof"></p>
+    <p id="instanceof"></p>
+  </body>
+  <script>
+    // **************The new Map() Method**************
+    let fruits = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200],
+    ]);
+
+    let numb = fruits.get("apples");
+    document.getElementById("new").innerHTML = "There are " + numb + " apples.";
+    // **************The set() Method**************
+    fruits = new Map();
+
+    // Set Map Values
+    fruits.set("apples", 500);
+    fruits.set("bananas", 300);
+    fruits.set("oranges", 200);
+
+    numb = fruits.get("apples");
+    document.getElementById("set").innerHTML = "There are " + numb + " apples.";
+    // **************The get() Method**************
+    document.getElementById("get").innerHTML = fruits.get("apples");
+    // **************Maps are Objects**************
+    document.getElementById("typeof").innerHTML = typeof fruits;
+    document.getElementById("instanceof").innerHTML = fruits instanceof Map;
+  </script>
+</html>

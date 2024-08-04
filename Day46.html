@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Set Methods</title>
+  </head>
+  <body>
+    <h2>The new Set() Method</h2>
+    <p id="new"></p>
+    <h2>The add() Method</h2>
+    <p id="add"></p>
+    <h2>The has() Method</h2>
+    <p id="has"></p>
+    <h2>The forEach() Method</h2>
+    <p id="forEach"></p>
+    <h2>The values() Method</h2>
+    <p id="value"></p>
+    <h2>The keys() Method</h2>
+    <p id="keys"></p>
+    <h2>The entries() Method</h2>
+    <p id="entries"></p>
+  </body>
+
+  <script>
+    // *************The new Set() Method*************
+    const letters = new Set(["a", "b", "c"]);
+    document.getElementById("new").innerHTML =
+      "The set has " + letters.size + " values.";
+
+    //   *************The add() Method*************
+    // Add a new Element
+    letters.add("d");
+    letters.add("e");
+
+    // Display set.size
+    document.getElementById("add").innerHTML =
+      "The set has " + letters.size + " values.";
+
+    // *************The has() Method*************
+
+    // Does the Set contain "d"?
+    answer = letters.has("d");
+    document.getElementById("has").innerHTML = "The answer is " + answer;
+
+    // *************The forEach() Method*************
+    // List all Elements
+    let text = "";
+    letters.forEach(function (value) {
+      text += value + "<br>";
+    });
+
+    document.getElementById("forEach").innerHTML = text;
+
+    // *************The values() Method*************
+    const myIterator = letters.values();
+
+    // List all Elements
+    let textq = "";
+    for (const x of myIterator) {
+      textq += x + "<br>";
+    }
+
+    document.getElementById("value").innerHTML = textq;
+
+    // *************The keys() Method*************
+    const myIteratorq = letters.keys();
+
+    // List all Elements
+    let texte = "";
+    for (const x of myIteratorq) {
+      texte += x + "<br>";
+    }
+
+    document.getElementById("keys").innerHTML = texte;
+
+    // *************The entries() Method*************
+    // Get all Entries
+    const iterator = letters.entries();
+
+    // List all Entries
+    let textp = "";
+    for (const entry of iterator) {
+      textp += entry + "<br>";
+    }
+
+    document.getElementById("entries").innerHTML = textp;
+  </script>
+</html>

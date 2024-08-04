@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Map Methods</title>
+  </head>
+  <body>
+    <h2>Map.size</h2>
+    <p id="size"></p>
+    <h2>Map.delete()</h2>
+    <p id="delete"></p>
+    <h2>Map.clear()</h2>
+    <p id="clear"></p>
+    <h2>Map.has()</h2>
+    <p id="has"></p>
+    <h2>Map.forEach()</h2>
+    <p id="forEach"></p>
+    <h2>Map.entries()</h2>
+    <p id="entries"></p>
+    <h2>Map.keys()</h2>
+    <p id="keys"></p>
+    <h2>Map.values()</h2>
+    <p id="values"></p>
+    <h2>Map.groupBy()</h2>
+    <p id="groupBy"></p>
+  </body>
+  <script>
+    let fruits = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200],
+    ]);
+    //*****************************Map.size*****************************
+    document.getElementById("size").innerHTML = fruits.size;
+    //*****************************Map.delete()*****************************
+    fruits.delete("apples");
+
+    document.getElementById("delete").innerHTML = fruits.size;
+    //*****************************Map.clear*****************************
+    fruits.clear();
+
+    document.getElementById("clear").innerHTML = fruits.size;
+    //*****************************Map.has()*****************************
+    fruits = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200],
+    ]);
+
+    document.getElementById("has").innerHTML = fruits.has("apples");
+    //*****************************Map.forEach()*****************************
+    let text = "";
+    fruits.forEach(function (value, key) {
+      text += key + " = " + value + "<br>";
+    });
+
+    document.getElementById("forEach").innerHTML = text;
+    //*****************************Map.entries()*****************************
+    for (const x of fruits.entries()) {
+      text += x + "<br>";
+    }
+
+    document.getElementById("entries").innerHTML = text;
+    //*****************************Map.keys()*****************************
+    for (const x of fruits.keys()) {
+      text += x + "<br>";
+    }
+
+    document.getElementById("keys").innerHTML = text;
+
+    //*****************************Map.values()*****************************
+    for (const x of fruits.values()) {
+      text += x + "<br>";
+    }
+
+    document.getElementById("values").innerHTML = text;
+    //*****************************Map.groupBy()*****************************
+    fruits = [
+      { name: "apples", quantity: 300 },
+      { name: "bananas", quantity: 500 },
+      { name: "oranges", quantity: 200 },
+      { name: "kiwi", quantity: 150 },
+    ];
+
+    // Callback function to select low volumes
+    function myCallback({ quantity }) {
+      return quantity > 200 ? "ok" : "low";
+    }
+
+    // Group by ok and low
+    const result = Map.groupBy(fruits, myCallback);
+
+    // Display Results
+    text = "These fruits are Ok: <br>";
+    for (let x of result.get("ok")) {
+      text += x.name + " " + x.quantity + "<br>";
+    }
+    text += "<br>These fruits are low: <br>";
+    for (let x of result.get("low")) {
+      text += x.name + " " + x.quantity + "<br>";
+    }
+    document.getElementById("groupBy").innerHTML = text;
+
+    console.log(result.get("ok"));
+  </script>
+</html>

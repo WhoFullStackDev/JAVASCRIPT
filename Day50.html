@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Type Conversion</title>
+  </head>
+  <body>
+    <h2>Converting Strings to Numbers</h2>
+    <p id="StringToNumber"></p>
+    <h2>The Unary + Operator</h2>
+    <p id="Unary"></p>
+    <h2>Converting Numbers to Strings</h2>
+    <p id="numberToString"></p>
+    <h2>Converting Dates to Numbers</h2>
+    <p id="dateToNumber"></p>
+    <h2>Converting Dates to Strings</h2>
+    <p id="dateToString"></p>
+    <h2>Converting Booleans to Numbers</h2>
+    <p id="booleanToNumber"></p>
+    <h2>Converting Booleans to Strings</h2>
+    <p id="booleanToString"></p>
+    <h2>Automatic Type Conversion</h2>
+    <p id="AutomaticType"></p>
+  </body>
+  <script>
+    //Converting Strings to Numbers
+    document.getElementById("StringToNumber").innerHTML =
+      Number("3.14") +
+      "<br>" +
+      Number(Math.PI) +
+      "<br>" +
+      Number("    ") +
+      "<br>" +
+      Number("") +
+      "<br>" +
+      Number("99 88") +
+      "<br>" +
+      Number("John") +
+      "<br>";
+
+    //The Unary + Operator
+    let y = "5";
+    let x = +y;
+    document.getElementById("Unary").innerHTML = typeof y + "<br>" + typeof x;
+
+    //Converting Numbers to Strings
+    document.getElementById("numberToString").innerHTML =
+      String(x) +
+      "<br>" +
+      String(123) +
+      "<br>" +
+      String(100 + 23) +
+      x.toString() +
+      "<br>" +
+      (123).toString() +
+      "<br>" +
+      (100 + 23).toString();
+
+    //Converting Dates to Numbers
+    let d = new Date();
+    document.getElementById("dateToNumber").innerHTML = Number(d);
+
+    //Converting Dates to Strings
+
+    document.getElementById("dateToString").innerHTML =
+      String(Date()) + "<br>" + Date().toString();
+
+    //Converting Booleans to Numbers
+    document.getElementById("booleanToNumber").innerHTML =
+      Number(false) + "<br>" + Number(true);
+
+    //Converting Booleans to Strings
+    document.getElementById("booleanToString").innerHTML =
+      String(false) +
+      "<br>" +
+      String(true) +
+      "<br>" +
+      false.toString() +
+      "<br>" +
+      true.toString();
+
+    //Automatic Type Conversion
+    document.getElementById("AutomaticType").innerHTML =
+      5 +
+      null +
+      "<br>" +
+      ("5" + null) +
+      "<br>" +
+      ("5" + 2) +
+      "<br>" +
+      ("5" - 2) +
+      "<br>" +
+      "5" * "2" +
+      "<br>" +
+      "5" / "2" +
+      "<br>";
+  </script>
+</html>
