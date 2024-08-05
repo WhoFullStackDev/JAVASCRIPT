@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Errors</title>
+  </head>
+  <body>
+    <h2>JavaScript try and catch</h2>
+    <p id="tryCatch"></p>
+    <h2>JavaScript Throws Errors</h2>
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+    <h2>The finally Statement</h2>
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+
+    <p id="p01"></p>
+  </body>
+  <script>
+    // *********************JavaScript try and catch*********************
+    try {
+      adddlert("Welcome guest!");
+    } catch (err) {
+      document.getElementById("tryCatch").innerHTML = err.message;
+    }
+
+    // *********************JavaScript Throws Errors*********************
+    function myFunction() {
+      const message = document.getElementById("p01");
+      message.innerHTML = "";
+      let x = document.getElementById("demo").value;
+      try {
+        if (x.trim() == "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+      } catch (err) {
+        message.innerHTML = "Input is " + err;
+      }
+    }
+
+    // *********************The finally Statement*********************
+    function myFunction() {
+      const message = document.getElementById("p01");
+      message.innerHTML = "";
+      let x = document.getElementById("demo").value;
+      try {
+        if (x.trim() == "") throw "is empty";
+        if (isNaN(x)) throw "is not a number";
+        x = Number(x);
+        if (x > 10) throw "is too high";
+        if (x < 5) throw "is too low";
+      } catch (err) {
+        message.innerHTML = "Input " + err;
+      } finally {
+        document.getElementById("demo").value = "";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Destructuring</title>
+  </head>
+  <body>
+    <h2>Object Destructuring</h2>
+    <p id="obDes"></p>
+    <h2>Object Property Alias</h2>
+    <p id="obPrAl"></p>
+    <h2>String Destructuring</h2>
+    <p id="StrDes"></p>
+    <h2>Array Destructuring</h2>
+    <p id="ArrDes"></p>
+    <h2>Skipping Array Values</h2>
+    <p id="SkipArrValue"></p>
+    <h2>Array Position Values</h2>
+    <p id="ArrPosVal"></p>
+    <h2>The Rest Property</h2>
+    <p id="ResPro"></p>
+    <h2>Destructuring Maps</h2>
+    <p id="DesMap"></p>
+    <h2>Swapping JavaScript Variables</h2>
+    <p id="SwaJsVa"></p>
+  </body>
+  <script>
+    // *********************Object Destructuring*********************
+    // Create an Object
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 50,
+    };
+
+    // Destructuring
+    let { firstName, lastName, country = "US" } = person;
+
+    // Display Primitive Values
+    document.getElementById("obDes").innerHTML =
+      firstName + " " + lastName + "" + country;
+
+    // *********************Object Property Alias*********************
+    let { lastName: name } = person;
+    document.getElementById("obPrAl").innerHTML = name;
+
+    // *********************String Destructuring*********************
+    name = "W3Schools";
+
+    // Destructuring
+    let [a1, a2, a3, a4, a5] = name;
+
+    // Display Value
+    document.getElementById("StrDes").innerHTML = a1;
+
+    // *********************Array Destructuring*********************
+    // Create an Array
+    const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+
+    // Destructuring
+    let [fruit1, fruit2] = fruits;
+
+    // Display Primitive Values
+    document.getElementById("ArrDes").innerHTML = fruit1 + " " + fruit2;
+
+    // *********************Skipping Array Values*********************
+    [fruit1, , , fruit2] = fruits;
+    document.getElementById("SkipArrValue").innerHTML = fruit1 + "" + fruit2;
+
+    // *********************Array Position Values*********************
+
+    let { [0]: fruitt1, [1]: fruitt2 } = fruits;
+
+    // Display Primitive Values
+    document.getElementById("ArrPosVal").innerHTML = fruitt1 + "" + fruitt2;
+
+    // *********************The Rest Property*********************
+    // Create an Array
+    const numbers = [10, 20, 30, 40, 50, 60, 70];
+
+    // Destructuring
+    const [a, b, ...rest] = numbers;
+
+    // Display the Values
+    document.getElementById("ResPro").innerHTML =
+      "<p>a is " + a + "<p>b is " + b + "<p>the rest is " + rest;
+
+    // *********************Destructuring Maps*********************
+    fruits = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200],
+    ]);
+
+    // Destructing
+    let text = "";
+    for (const [key, value] of fruits) {
+      text += "<p>" + key + " is " + value;
+    }
+
+    // Display the Values
+    document.getElementById("DesMap").innerHTML = text;
+
+    // *********************Swapping JavaScript Variables*********************
+    firstName = "John";
+    lastName = "Doe";
+
+    // Destructing
+    [firstName, lastName] = [lastName, firstName];
+
+    // Display the Values
+    document.getElementById("SwaJsVa").innerHTML = firstName + " " + lastName;
+  </script>
+</html>
