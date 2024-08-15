@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript HTML DOM Elements</title>
+    <h2 id="intro">Finding HTML Element by Id</h2>
+    <p id="id"></p>
+    <h2>Finding HTML Elements by Tag Name</h2>
+    <p id="tag"></p>
+    <h2 class="start">Finding HTML Elements by Class Name.</h2>
+    <h2 class="start">Demo</h2>
+    <p id="class"></p>
+    <h2>Finding HTML Elements by CSS Selectors</h2>
+    <p class="int">Hello world</p>
+    <p class="int">example</p>
+    <p id="Selectors"></p>
+    <h2>Finding HTML Elements by HTML Object Collections</h2>
+    <form id="frm1" action="">
+      First name: <input type="text" name="fname" value="Donald" /><br />
+      Last name: <input type="text" name="lname" value="Duck" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+
+    <p id="demo"></p>
+  </head>
+  <body>
+    <script>
+      // Finding HTML Element by Id
+
+      let element = document.getElementById("intro");
+      document.getElementById("id").innerHTML =
+        "The text from the intro paragraph is: " + element.innerHTML;
+
+      // Finding HTML Elements by Tag Name
+
+      element = document.getElementsByTagName("p");
+      document.getElementById("tag").innerHTML =
+        "The text in first paragraph (index 0) is: " + element[0].innerHTML;
+
+      // Finding HTML Elements by Class Name.
+
+      let x = document.getElementsByClassName("start");
+      document.getElementById("class").innerHTML =
+        "The first paragraph (index 0) with class=start is:" + x[0].innerHTML;
+
+      // Finding HTML Elements by CSS Selectors
+      x = document.querySelectorAll("p.int");
+      document.getElementById("Selectors").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' +
+        x[0].innerHTML;
+
+      // Finding HTML Elements by HTML Object Collections
+
+      x = document.forms["frm1"];
+      let text = "";
+      for (let i = 0; i < x.length; i++) {
+        text += x.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
