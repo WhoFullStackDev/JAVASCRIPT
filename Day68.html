@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript HTML DOM Elements (Nodes)</title>
+  </head>
+  <body>
+    <h2>Creating New HTML Elements (Nodes)</h2>
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+    <h2>Creating new HTML Elements - insertBefore()</h2>
+    <div id="div2">
+      <p id="p3">This is a paragraph.</p>
+      <p id="p4">This is another paragraph.</p>
+    </div>
+    <h2>Removing Existing HTML Elements</h2>
+    <div id="div3">
+      <p id="p5">This is a paragraph.</p>
+      <p id="p6">This is another paragraph.</p>
+    </div>
+    <h2>Removing a Child Node</h2>
+    <div id="div4">
+      <p id="p7">This is a paragraph.</p>
+      <p id="p8">This is another paragraph.</p>
+    </div>
+    <h2>Replacing HTML Elements</h2>
+    <div id="div5">
+      <p id="p9">This is a paragraph.</p>
+      <p id="p10">This is another paragraph.</p>
+    </div>
+  </body>
+  <script>
+    // Creating New HTML Elements (Nodes)
+    let para = document.createElement("p");
+    let node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    let element = document.getElementById("div1");
+    element.appendChild(para);
+
+    //Creating new HTML Elements - insertBefore()
+    para = document.createElement("p");
+    node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    element = document.getElementById("div2");
+    element.appendChild(para);
+    let child = document.getElementById("p3");
+    element.insertBefore(para, child);
+
+    // Removing Existing HTML Elements
+    let elmnt = document.getElementById("p5");
+    elmnt.remove();
+
+    // Removing a Child Node
+    let parent = document.getElementById("div4");
+    child = document.getElementById("p7");
+    parent.removeChild(child);
+
+    // Replacing HTML Elements
+
+    para = document.createElement("p");
+    node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    parent = document.getElementById("div5");
+    child = document.getElementById("p9");
+    parent.replaceChild(para, child);
+  </script>
+</html>

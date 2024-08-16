@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="checkCookies()">
+    <h2>Reacting to Events</h2>
+    <!-- <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1> -->
+    <p onclick="changeText(this)">Click on this text!</p>
+    <h2>HTML Event Attributes</h2>
+    <button onclick="displayDate()">this time is ?</button>
+    <p id="demo"></p>
+    <h2>Assign Events Using the HTML DOM</h2>
+    <button id="Btn">try it</button>
+    <h2>The onload Attribute</h2>
+    <p id="demo2"></p>
+    <h2>The oninput Attribute</h2>
+
+    Enter your name: <input type="text" id="fname" oninput="upperCase()" />
+
+    <h2>The onchange Attribute</h2>
+
+    Enter your name: <input type="text" id="fname" onchange="upperCase()" />
+    <h2>The onmouseover Attribute</h2>
+
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse Over Me
+    </div>
+  </body>
+  <script>
+    // Reacting to Events
+    function changeText(id) {
+      id.innerHTML = "Ooops!";
+    }
+
+    // HTML Event Attributes
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+
+    // Assign Events Using the HTML DOM
+    document.getElementById("Btn").onclick = displayDate;
+
+    // The onload and onunload Events
+    function checkCookies() {
+      let text = "";
+      if (navigator.cookieEnabled == true) {
+        text = "Cookies are enabled.";
+      } else {
+        text = "Cookies are not enabled.";
+      }
+      document.getElementById("demo2").innerHTML = text;
+    }
+
+    // The oninput Attribute
+    function upperCase() {
+      const x = document.getElementById("fname");
+      x.value = x.value.toUpperCase();
+    }
+
+    // The onmouseover Attribute
+
+    function mOver(obj) {
+      obj.innerHTML = "Thank You";
+    }
+
+    function mOut(obj) {
+      obj.innerHTML = "Mouse Over Me";
+    }
+  </script>
+</html>

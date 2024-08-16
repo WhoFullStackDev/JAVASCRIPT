@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript HTML DOM Navigation</title>
+  </head>
+  <body>
+    <h2>innerHTML property</h2>
+    <p id="id01">My First Page</p>
+    <p id="id02"></p>
+    <h2>nodeValue property</h2>
+    <p id="id03">My Page</p>
+    <p id="id04"></p>
+    <h2>childNodes property</h2>
+    <p id="id05">My First Page</p>
+    <p id="id06">Hello!</p>
+    <h2>DOM Root Nodes</h2>
+    <p>Displaying document.body</p>
+
+    <p id="demo"></p>
+    <h2>The nodeName Property</h2>
+    <p id="id07">I know you</p>
+    <p id="id08"></p>
+
+    <h2>The nodeType Property</h2>
+    <p id="id09">Node you know</p>
+    <p id="id10"></p>
+  </body>
+  <script>
+    //  innerHTML property
+    document.getElementById("id02").innerHTML =
+      document.getElementById("id01").innerHTML;
+
+    // nodeValue property
+    document.getElementById("id04").innerHTML =
+      document.getElementById("id03").firstChild.nodeValue;
+
+    // childNodes
+    document.getElementById("id06").innerHTML =
+      document.getElementById("id05").childNodes[0].nodeValue;
+
+    // DOM Root Nodes
+    // document.getElementById("demo").innerHTML = document.body.innerHTML;
+    // document.getElementById("demo").innerHTML =
+    //   document.documentElement.innerHTML;
+
+    // The nodeName Property
+    document.getElementById("id07").innerHTML =
+      document.getElementById("id08").nodeName;
+
+    // The nodeType Property
+    document.getElementById("id09").innerHTML =
+      document.getElementById("id10").nodeType;
+  </script>
+</html>
